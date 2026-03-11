@@ -17,5 +17,8 @@ while True:
     except ValueError:
         print("Error: Por favor, ingrese un número entero válido.")
 
-# Calcular el costo total del producto
+# Calcular el costo total
 costo_total = ask_precio * ask_cantidad
+
+# Mostrar los resultados en pantalla
+print(f"Producto: {ask_nombre} | Precio: ${ask_precio} | Cantidad: {ask_cantidad} | Total: ${costo_total}")
