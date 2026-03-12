@@ -1,42 +1,42 @@
 # Función para pedir un entero válido
-def pedir_entero(mensaje):
+def ask_integer(message):
     while True:
         try:
-            return int(input(mensaje))
+            return int(input(message))
         except ValueError:
             print("Error: Por favor, ingrese un número entero válido.")
 
 # Función para pedir un flotante válido
-def pedir_flotante(mensaje):
+def ask_float(message):
     while True:
         try:
-            return float(input(mensaje))
+            return float(input(message))
         except ValueError:
             print("Error: Por favor, ingrese un número decimal válido (ejemplo: 10.5).")
 
 # Preguntar cuántos productos en total el usuario desea ingresar
-ask_cantidad_ingresar = pedir_entero("¿Cuántos productos desea ingresar?\n")
+ask_quantity_insert = ask_integer("¿Cuántos productos desea ingresar?\n")
 
 # Bucle que se ejecuta mientras queden productos por ingresar
-while ask_cantidad_ingresar != 0:
+while ask_quantity_insert != 0:
 
     # Solicitar el nombre del producto
-    ask_nombre = input("Ingrese el nombre del producto: ")
+    ask_name = input("Ingrese el nombre del producto: ")
 
     # Solicitar el precio del producto
-    ask_precio = pedir_flotante("Ingrese el precio del producto: $")
+    ask_price = ask_float("Ingrese el precio del producto: $")
 
     # Solicitar la cantidad del producto
-    ask_cantidad = pedir_entero(f"Ingrese la cantidad de {ask_nombre} que desea ingresar: ")
+    ask_quantity = ask_integer(f"Ingrese la cantidad de {ask_name} que desea ingresar: ")
 
     # Calcular el costo total del producto
-    costo_total = ask_precio * ask_cantidad
+    total_cost = ask_price * ask_quantity
 
     # Mostrar los resultados en pantalla
-    print(f"Producto: {ask_nombre} | Precio: ${ask_precio} | Cantidad: {ask_cantidad} | Total: ${costo_total}")
+    print(f"Producto: {ask_name} | Precio: ${ask_price} | Cantidad: {ask_quantity} | Total: ${total_cost}")
 
     # Reducir en uno la cantidad de productos restantes
-    ask_cantidad_ingresar -= 1
+    ask_quantity_insert -= 1
 
 # Este programa permite al usuario ingresar múltiples productos al inventario.
 # Para cada producto se solicita el nombre, el precio y la cantidad con validación de errores.
