@@ -50,10 +50,10 @@ Producto: Pan | Precio: $2.0 | Cantidad: 3 | Total: $6.0
 
 El programa utiliza dos funciones auxiliares para validar la entrada del usuario:
 
-* `pedir_entero(mensaje)`
+* `ask_integer(message)`
   Solicita un número entero y repite la pregunta hasta que el usuario ingrese un valor válido.
 
-* `pedir_flotante(mensaje)`
+* `ask_float(message)`
   Solicita un número decimal y valida que la entrada sea correcta.
 
 Flujo general del programa:
@@ -72,8 +72,8 @@ Flujo general del programa:
 
 ```
 inventario.py
- ├─ pedir_entero()     # Validación de números enteros
- ├─ pedir_flotante()   # Validación de números decimales
+ ├─ ask_integer()     # Validación de números enteros
+ ├─ ask_float()   # Validación de números decimales
  └─ Bucle principal    # Registro de productos y cálculo de totales
 ```
 
